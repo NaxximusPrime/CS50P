@@ -1,13 +1,20 @@
-def say_hello(to="World"):
-	print("Hello", to)
+def main():
+    dollars = dollars_to_float(input("How much was the meal? ").strip("$"))
+    percent = percent_to_float(input("What percentage would you like to tip? ").strip("%"))
+    tip = dollars * percent
+    print(f"Leave ${tip:.2f}")
 
 
-name = input("Name: ")
-say_hello(name)
+def dollars_to_float(d):
+    # TODO
+    d = float(d)
+    return d
 
 
-def calc(width, height):
-	return width * height
+def percent_to_float(p):
+    # TODO
+    p = float(p) * 0.01
+    return p
 
 
-print(calc(5, 8))
+main()
